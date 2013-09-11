@@ -1,0 +1,116 @@
+body {
+  background-image: url('../img/silver_scales.png');
+  background-color: #FFFFFF;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+article {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #FFFFFF;
+  width: 350px;
+  border: 1px solid #CCCCCC;
+  box-shadow: 5px 5px 2px #CCCCCC;
+}
+
+article header h2 {
+  font-family: 'Petit Formal Script', cursive;
+  font-weight: bolder;
+}
+
+@media (min-width: 600px) {
+  .nav {
+    display: none;
+  }
+}
+
+.navbar-brand {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: bolder;
+  float: none;
+  padding: 0px;
+  line-height: 50px;
+}
+
+.navbar {
+  min-width: 405px;
+  min-height: 30px;
+  text-align: center;
+  padding: 0px;
+  overflow: hidden;
+}
+
+nav ul {
+  text-align: center;
+  font-size: 14px;
+}
+
+nav ul li a {
+  padding: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 450px) {
+ .navbar-brand {
+    line-height: 30px;
+  }
+}
+
+article hr {
+  width: 70%;
+  border: 0;
+  height: 1px;
+  background: -moz-linear-gradient(left center, transparent, black, transparent);
+  background: -webkit-gradient(linear, left center, right center,
+                color-stop(0, transparent),
+                color-stop(0.5, #CCCCCC),
+                color-stop(1, transparent)
+              );
+}
+
+.panel {
+  background-color: transparent;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: -40px;
+  padding-top: 60px;
+  margin-bottom: -10px;
+}
+
+.image-wrap {
+  width: 32.5px;
+  height: 30px;
+}
+
+.honeyfund-logo {
+  width: 100px;
+  height: 30px;
+}
+
+.amazon-logo {
+  width: 100px;
+  height: 60px;
+}
+
+.mirror {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.directions {
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 14px;
+}
+
+#map {
+  width: 300px;
+  height: 300px;
+}

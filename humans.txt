@@ -1,0 +1,12 @@
+# TEAM
+
+    Drew Ditthardt -- Developer -- DorianGray@github
+
+# THANKS
+
+    Everyone
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
