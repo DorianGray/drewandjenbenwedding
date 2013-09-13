@@ -17,4 +17,24 @@ $(function(){
     }
   },
   "autofit" );
+
+  $("#rsvp").on("click", ".btn-party-add", function(e) {
+    var group = $(this).parent().parent().clone();
+    group.children(":first").val('');
+    group.insertAfter($(this).parent().parent());
+
+    $(this).
+      toggleClass("btn-party-add").
+      toggleClass("btn-party-remove").
+      children(":first").
+      toggleClass("glyphicon-plus").
+      toggleClass("glyphicon-minus");
+    e.preventDefault();
+    return false;
+  });
+  $("#rsvp").on("click", ".btn-party-remove", function(e) {
+    e.preventDefault();
+    $(this).parent().parent().remove();
+    return false;
+  });
 });
