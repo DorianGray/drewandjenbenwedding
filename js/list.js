@@ -8,7 +8,7 @@ $(function(){
           items.push('<li>' + val + '</li>');
         }
       });
-      $('<span style="font-size:10px;">RSVP ON '+new Date(val.lastModified*1000)+'</span>').appendTo("#names");
+      $('<span style="font-size:10px;">'+new Date(val.lastModified*1000)+'</span>').appendTo("#names");
       if(val.title){
         $('<br /><span>Party Of '+val.title+'</span>').appendTo('#names');
       }
