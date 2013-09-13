@@ -51,7 +51,7 @@ $(function(){
         type: "POST",
         url: "/api/rsvp",
         data: JSON.stringify(data),
-        success: function() { $("#rsvp-success").toggleClass("hidden"); },
+        success: function() { $("#rsvp-success").toggleClass("hidden"); $("#rsvp-form").toggleClass("hidden"); },
         dataType: "json",
         contentType: "application/json",
         processData: false,
