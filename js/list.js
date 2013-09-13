@@ -1,14 +1,18 @@
 $(function(){
   $.getJSON("http://drewandjenben.com/api/rsvp", function(data) {
-    var items = [];
-
     $.each(data, function(key, val) {
-      items.push('<li id="' + key + '">' + val + '</li>');
-    });
+      var items = [];
 
-    $('<ul/>', {
-      'class': 'names-list',
-      html: items.join('')
-    }).appendTo('#names');
+      $.each(val.names, function(key, val) {
+        items.push('<li>' + val + '</li>');
+      });
+      $('<span>RSVP ON '+new Date(val.lastModified*1000)+'</span>').appendTo('#names');
+      $('<ul id="'+ val._id +'" />', {
+        'class': 'names-list',
+        html: items.join('')
+      }).appendTo('#names');
+
+      $('<hr/>').appendTo('#names');
+    });
   });
 });
