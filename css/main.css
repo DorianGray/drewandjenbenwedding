@@ -24,6 +24,10 @@ article header h2 {
   font-weight: bolder;
 }
 
+.container {
+  text-align: center;
+}
+
 @media (min-width: 600px) {
   .nav {
     display: none;
