@@ -1,5 +1,5 @@
 $(function(){
-  $.getJSON("http://drewandjenben.com/api/rsvp", function(data) {
+  $.getJSON("/api/rsvp", function(data) {
     $.each(data, function(key, val) {
       var items = [];
 
