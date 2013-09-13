@@ -21,7 +21,7 @@ return {
     -- / is routed to /index in nginx
     ['request'] = { [pattern] = {
       patterns = {
-        { ['api/rsvp']  = 'endpoint.rsvp' }
+        { ['api/rsvp[/]?{rsvpId}']  = 'endpoint.rsvp' }
       }
     }},
 
