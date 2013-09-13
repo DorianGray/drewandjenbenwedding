@@ -12,7 +12,7 @@ $(function(){
       if(val.title){
         $('<br /><span>Party Of '+val.title+'</span>').appendTo('#names');
       }
-      $('<ul id="'+ val._id +'">'+items.join('')+'</ul>').appendTo('#names');
+      $('<ul class="names-list" id="'+ val._id +'">'+items.join('')+'</ul>').appendTo('#names');
       if(val.message){
         $('<span>Message:<br />'+val.message+'</span>').appendTo('#names');
       }

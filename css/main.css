@@ -129,3 +129,7 @@ article hr {
 .btn-party-remove {
   color: #b22222;
 }
+
+.names-list {
+  text-transform: none;
+}
