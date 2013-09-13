@@ -48,13 +48,14 @@
       </div>
     </nav>
 
+
     <div class="container">
 
       <div id="top" class="panel">
         <article>
           <header><h2>We're getting married!</h2></header>
           <hr />
-          OCT 26, 2013. 16:00
+          OCT 26, 2013. 4:00pm
           <hr />
           <p>If you're seeing this, you probably got an invitation!</p>
           <p>
@@ -71,6 +72,15 @@
           <hr />
           <p>The wedding is on the twenty sixth of October at four o'clock in the afternoon. If you can make it, please RSVP using the form below!</p>
           <hr />
+          <div class="container">
+            <div id="rsvp-success" class="alert alert-success hidden">
+              That's it! You're RSVPed! We'll see you at the wedding!
+            </div>
+            <div id="rsvp-failure" class="alert alert-danger hidden">
+              Oh no! Something went wrong and we did not get your RSVP. Please try again a bit later.
+            </div>
+          </div>
+
           <form role="form">
             <div class="form-group form-group-inline">
               <label for="partyMember">Party Members</label>
@@ -84,7 +94,7 @@
               </div>
               <p class="help-block">Please use the + sign on the right to add additional names.</p>
             </div>
-            <button type="submit" class="btn btn-default">Send</button>
+            <button type="button" id="rsvp-send" class="btn btn-default">Send</button>
           </form>
         </article>
       </div>

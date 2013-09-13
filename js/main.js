@@ -3,7 +3,6 @@ $(function(){
     $(".navbar-toggle").click();
   });
 
-
   $('#map').gmap3({
     map: {
       options: {
@@ -23,18 +22,40 @@ $(function(){
     group.children(":first").val('');
     group.insertAfter($(this).parent().parent());
 
-    $(this).
-      toggleClass("btn-party-add").
-      toggleClass("btn-party-remove").
-      children(":first").
-      toggleClass("glyphicon-plus").
-      toggleClass("glyphicon-minus");
+    $(this)
+      .toggleClass("btn-party-add")
+      .toggleClass("btn-party-remove")
+      .children(":first")
+      .toggleClass("glyphicon-plus")
+      .toggleClass("glyphicon-minus");
     e.preventDefault();
     return false;
   });
-  $("#rsvp").on("click", ".btn-party-remove", function(e) {
-    e.preventDefault();
-    $(this).parent().parent().remove();
-    return false;
-  });
+
+  $("#rsvp")
+    .on("click", ".btn-party-remove", function(e) {
+      e.preventDefault();
+      $(this).parent().parent().remove();
+      return false;
+    })
+    .on("click", "#rsvp-send", function(e) {
+
+      var names = [];
+      $(this).closest("form").each(function() {
+        names.push($(this).val());
+      });
+      var data = {
+        names : names
+      }
+      var jqxhr = $.ajax({
+        type: "POST",
+        url: "/api/rsvp",
+        data: JSON.stringify(data),
+        success: function() { $("#rsvp-success").toggleClass("hidden"); },
+        dataType: "json",
+        contentType: "application/json",
+        processData: false,
+        error: function() { $("#rsvp-failure").toggleClass("hidden"); }
+      });
+    });
 });
