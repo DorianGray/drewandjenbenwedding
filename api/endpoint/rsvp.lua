@@ -26,7 +26,7 @@ local methods = {
   end,
 
   POST = function(self, id, input)
-    rsvp.post(input)
+    store.post(input)
     context.output = input
   end
 }
