@@ -8,9 +8,14 @@ $(function(){
           items.push('<li>' + val + '</li>');
         }
       });
-      $('<span>RSVP ON '+new Date(val.lastModified*1000)+'<br />Party Of '+val.title+'</span>').appendTo('#names');
+      $('<span>RSVP ON '+new Date(val.lastModified*1000).format("dddd, mmmm, yyyy, h:MM:ss TT")+'</span>').appendTo("#names");
+      if(val.title){
+        $('<br /><span>Party Of '+val.title+'</span>').appendTo('#names');
+      }
       $('<ul id="'+ val._id +'">'+items.join('')+'</ul>').appendTo('#names');
-      $('<span>Message:<br />'+val.message+'</span>').appendTo('#names');
+      if(val.message){
+        $('<span>Message:<br />'+val.message+'</span>').appendTo('#names');
+      }
 
       $('<hr/>').appendTo('#names');
     });
