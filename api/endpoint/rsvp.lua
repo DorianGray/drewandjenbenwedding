@@ -28,6 +28,7 @@ local methods = {
   POST = function(self, id, input)
     store.post(input)
     context.output = input
+    context.response.status = 200
   end
 }
 
