@@ -4,7 +4,9 @@ $(function(){
       var items = [];
 
       $.each(val.names, function(key, val) {
-        items.push('<li>' + val + '</li>');
+        if(val){
+          items.push('<li>' + val + '</li>');
+        }
       });
       $('<span>RSVP ON '+new Date(val.lastModified*1000)+'</span>').appendTo('#names');
       $('<ul id="'+ val._id +'">'+items.join('')+'</ul>').appendTo('#names');
