@@ -19,6 +19,7 @@ $(function(){
 
   $("#rsvp").on("click", ".btn-party-add", function(e) {
     var group = $(this).parent().parent().clone();
+    group.next("label").remove();
     group.children(":first").val('');
     group.insertAfter($(this).parent().parent());
 
