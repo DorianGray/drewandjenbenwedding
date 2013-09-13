@@ -83,15 +83,16 @@
 
           <form id="rsvp-form" role="form">
             <div class="form-group form-group-inline">
-              <label for="partyMember">Party Members</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="partyMember" name="party[]" placeholder="First and Last Name">
-                <span class="input-group-btn">
-                  <button type="button" class="btn btn-default btn-party-add">
-                    <i class="glyphicon glyphicon-plus"></i>
-                  </button>
-                </span>
-              </div>
+              <label>Party Members
+                <div class="input-group">
+                  <input type="text" class="form-control" name="party[]" placeholder="First and Last Name">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-party-add">
+                      <i class="glyphicon glyphicon-plus"></i>
+                    </button>
+                  </span>
+                </div>
+              </label>
               <p class="help-block">Please use the + sign on the right to add additional names.</p>
             </div>
             <button type="button" id="rsvp-send" class="btn btn-default">Send</button>
