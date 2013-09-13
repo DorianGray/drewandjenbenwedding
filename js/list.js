@@ -7,10 +7,7 @@ $(function(){
         items.push('<li>' + val + '</li>');
       });
       $('<span>RSVP ON '+new Date(val.lastModified*1000)+'</span>').appendTo('#names');
-      $('<ul id="'+ val._id +'" />', {
-        'class': 'names-list',
-        html: items.join('')
-      }).appendTo('#names');
+      $('<ul id="'+ val._id +'">'+items.join('')+'</ul>').appendTo('#names');
 
       $('<hr/>').appendTo('#names');
     });
