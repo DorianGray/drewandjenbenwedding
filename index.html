@@ -83,7 +83,12 @@
 
           <form id="rsvp-form" role="form">
             <div class="form-group form-group-inline">
-              <label>Party Members
+              <label>Party Title
+                <div class="input-group">
+                  <input type="text" class="form-control" name="title" placeholder="The Smith Family">
+                </div>
+              </label>
+              <label>Members
                 <div class="input-group">
                   <input type="text" class="form-control" name="party[]" placeholder="First and Last Name">
                   <span class="input-group-btn">
@@ -92,8 +97,15 @@
                     </button>
                   </span>
                 </div>
+                <p class="help-block">Please use the + sign on the right to add additional names.</p>
               </label>
-              <p class="help-block">Please use the + sign on the right to add additional names.</p>
+              <label>
+                Optional Message to the Couple
+                <div class="input-group">
+                  <textarea class="form-control" name="message" cols=100 rows=3 placeholder="Message">
+                  </textarea>
+                </div>
+              </label>
             </div>
             <button type="button" id="rsvp-send" class="btn btn-default">Send</button>
           </form>

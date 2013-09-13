@@ -41,11 +41,13 @@ $(function(){
     .on("click", "#rsvp-send", function(e) {
 
       var names = [];
-      $("#rsvp-form input[type='text']").each(function() {
+      $("#rsvp-form input[name='party[]']").each(function() {
         names.push($(this).val());
       });
       var data = {
-        names : names
+        names : names,
+        title: $("#rsvp-form input[name='title']").val(),
+        message: $("#rsvp-form textarea[name='message']").val()
       }
       var jqxhr = $.ajax({
         type: "POST",
