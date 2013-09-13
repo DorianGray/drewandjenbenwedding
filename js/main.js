@@ -41,7 +41,7 @@ $(function(){
     .on("click", "#rsvp-send", function(e) {
 
       var names = [];
-      $(this).closest("form").each(function() {
+      $("#rsvp-form input[type='text']").each(function() {
         names.push($(this).val());
       });
       var data = {
