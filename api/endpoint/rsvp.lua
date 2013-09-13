@@ -1,5 +1,5 @@
 local store = context.store.rsvp
-
+local id = rsvpId
 local methods = {
 
   GET = function(self, id, input)
