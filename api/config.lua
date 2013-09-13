@@ -52,7 +52,7 @@ return {
     ['store:rsvp'] = {
       ['lusty-store-mongo.store.mongo'] = {
         collection = 'rsvp',
-        host = '127.0.0.1',
+        host = '10.164.93.29',
         port = 27017,
         database = 'wedding',
         timeout = 5000
